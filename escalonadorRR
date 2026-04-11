@@ -1,0 +1,80 @@
+// C++ code – Escalonador Round Robin 
+
+const int LED_VERMELHO = 12;
+const int LED_VERDE = 11;
+
+int processos[] = {2000, 1300, 50, 234};   
+int restante[]  = {2000, 1300, 50, 234};   
+
+const int quantum = 200;
+
+
+int total = sizeof(processos) / sizeof(processos[0]);
+
+void setup()
+{
+  pinMode(LED_VERMELHO, OUTPUT);
+  pinMode(LED_VERDE, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  bool terminou = true;
+
+  
+  for (int i = 0; i < total; i++)
+  {
+    if (restante[i] > 0)
+    {
+      terminou = false;
+
+      Serial.print("Processo P");
+      Serial.print(i + 1);
+      Serial.print(" | Tempo restante: ");
+      Serial.println(restante[i]);
+
+      executar(i);
+    }
+  }
+
+  
+    if (terminou)	
+    {
+      Serial.println("Todos os processos foram finalizados!");
+      while (1); 
+    }
+  }
+
+
+void executar(int processo)
+{
+  int exec_time;
+	
+  	if (restante[processo] > quantum) {
+    	exec_time = quantum;
+	} else {
+    	exec_time = restante[processo];
+	}
+
+  Serial.print("Executando P");
+  Serial.print(processo + 1);
+  Serial.print(" por ");
+  Serial.print(exec_time);
+  Serial.println(" ms");
+  delay(1000);
+
+  digitalWrite(LED_VERMELHO, HIGH);
+  delay(exec_time);
+  digitalWrite(LED_VERMELHO, LOW);
+
+  restante[processo] -= exec_time;
+
+  
+  if (restante[processo] == 0)
+  {
+    digitalWrite(LED_VERDE, HIGH);
+    delay(1000);
+    digitalWrite(LED_VERDE, LOW);
+  }
+}
