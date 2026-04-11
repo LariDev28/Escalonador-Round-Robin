@@ -52,7 +52,7 @@
 
 🔹 No Tinkercad
 
-  Acesse a plataforma Tinkercad
+  Acesse a plataforma Tinkercad: https://www.tinkercad.com
   
   Abra o projeto
   
