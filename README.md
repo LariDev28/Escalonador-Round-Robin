@@ -43,8 +43,11 @@ Tinkercad
 🔹 No Tinkercad
 
 Acesse a plataforma Tinkercad
+
 Abra o projeto
+
 Inicie a simulação
+
 Observe a execução dos processos no console
 
 📊 Exemplo de Funcionamento
