@@ -11,8 +11,11 @@ O projeto demonstra como funciona o gerenciamento de processos, utilizando o con
 🎯 Objetivos do Projeto
 
 Simular o funcionamento do algoritmo Round Robin
+
 Aplicar conceitos de Sistemas Operacionais
+
 Utilizar C++ para controle de execução de processos
+
 Demonstrar o comportamento do escalonador em ambiente simulado
 
 🧠 Conceito: Round Robin
@@ -20,8 +23,11 @@ Demonstrar o comportamento do escalonador em ambiente simulado
 O Round Robin é um algoritmo de escalonamento que:
 
 Distribui o tempo de CPU de forma igual entre os processos
+
 Utiliza um tempo fixo chamado quantum
+
 Interrompe o processo quando o tempo expira
+
 Coloca o processo no final da fila
 
 👉 Isso garante maior equidade e responsividade no sistema.
@@ -29,13 +35,17 @@ Coloca o processo no final da fila
 ⚙️ Funcionalidades
 
 Simulação de múltiplos processos
+
 Controle de tempo de execução (quantum)
+
 Atualização do estado dos processos
+
 Exibição da ordem de execução
 
 🛠️ Tecnologias Utilizadas
 
 C++
+
 Tinkercad
 
 🚀 Como Executar
@@ -65,14 +75,19 @@ P1 → P2 → P3 → P1 → P3 → ...
 📚 Aprendizados
 
 Funcionamento de algoritmos de escalonamento
+
 Gerenciamento de processos
+
 Uso de estruturas de dados (filas)
+
 Implementação de lógica em C++
 
 💡 Melhorias Futuras
 
 Interface gráfica da simulação
+
 Suporte a diferentes algoritmos (FIFO, SJF)
+
 Visualização do tempo de espera e turnaround
 
 📌 Conclusão
