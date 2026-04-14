@@ -32,7 +32,7 @@
 
   👉 Isso garante maior equidade e responsividade no sistema.
   
-🧠 Arquitetura do Sistema
+🏗️ Arquitetura do Sistema
 
   Como garantir que vários processos rodem de forma justa em um único processador? Este projeto responde a isso simulando o escalonamento Round Robin. Estruturei o sistema para que o microcontrolador dite o ritmo, alternando entre as tarefas e sinalizando o status com LEDs — vermelho para 'em execução' e verde para 'concluído'. O resultado é um fluxo contínuo e inteligente que reduz a fatia de tempo (quantum) de cada processo progressivamente, mostrando na prática a eficiência por trás do compartilhamento de tempo em sistemas computacionais.
   
