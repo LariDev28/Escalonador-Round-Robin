@@ -71,7 +71,9 @@
   Entrada:
   
   Processos: P1, P2, P3, P4
+  
   Tempo (burst): 2000, 1300, 50, 234 
+  
   Quantum: 200
   
   Saída esperada:
