@@ -46,6 +46,8 @@
   
   Exibição da ordem de execução
 
+  Indicação luminosa do ciclo de vida do processo (Execução vs. Finalização)
+
 🛠️ Tecnologias Utilizadas
 
   C++
@@ -68,13 +70,21 @@
 
   Entrada:
   
-  Processos: P1, P2, P3  
-  Tempo (burst): 5, 3, 7  
-  Quantum: 2
+  Processos: P1, P2, P3, P4
+  Tempo (burst): 2000, 1300, 50, 234 
+  Quantum: 200
   
   Saída esperada:
   
-  P1 → P2 → P3 → P1 → P3 → ...
+P1 executa 200ms (restam 1800ms) → LED Vermelho pisca
+
+P2 executa 200ms (restam 1100ms) → LED Vermelho pisca
+
+P3 executa 50ms (Finalizado!) → LED Verde sinaliza conclusão
+
+P4 executa 200ms (restam 34ms) → LED Vermelho pisca
+
+P1 retorna para mais 200ms...
 
 📚 Aprendizados
 
@@ -96,4 +106,4 @@
 
 📌 Conclusão
 
-  Este projeto demonstra, de forma prática, como o algoritmo Round Robin atua no gerenciamento de processos, sendo essencial para entender o funcionamento interno de sistemas operacionais modernos.
+  Este projeto foi fundamental para visualizar como o compartilhamento de tempo (Time Sharing) impede que um processo 'faminto' monopolize a CPU, um princípio que sustenta desde microcontroladores simples até sistemas complexos como Linux e Windows.
